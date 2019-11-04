@@ -8,16 +8,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          I am your first PWA App
+          Привіт я майбутній додаток PWA Acord.taxi. <br></br>
+          Ти можеш додати мене на головний екран. <br></br>
+          Для цього тільки натисни + на URL стрічці якщо ти використовуєш Dasktop, <br></br>
+          або додай мене на головний екран якщо використовуєш Mobile. <br></br>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
