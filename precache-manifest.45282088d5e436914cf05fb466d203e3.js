@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b3e717c087b586e1118ff83389a0f4ff",
+    "revision": "b536d0dcd14208395bedc2d9c7e5cf33",
     "url": "/Acord/index.html"
   },
   {
-    "revision": "88420e3345290c41c43a",
+    "revision": "ba12eb2c9729c85069c5",
     "url": "/Acord/static/css/main.b100e6da.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Acord/static/js/2.14fdfa64.chunk.js"
   },
   {
-    "revision": "88420e3345290c41c43a",
-    "url": "/Acord/static/js/main.4466c9a2.chunk.js"
+    "revision": "ba12eb2c9729c85069c5",
+    "url": "/Acord/static/js/main.666df153.chunk.js"
   },
   {
     "revision": "631885efc64bcd25ee2d",
