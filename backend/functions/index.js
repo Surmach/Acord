@@ -1,16 +1,11 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const express = require("express");
+const app = express();
 
 admin.initializeApp();
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  response.send("Hello from");
-});
-
-exports.getDrivers = functions.https.onRequest((req, res) => {
+app.get("/drivers", (req, res) => {
   admin
     .firestore()
     .collection("drivers")
@@ -18,19 +13,19 @@ exports.getDrivers = functions.https.onRequest((req, res) => {
     .then(data => {
       let drivers = [];
       data.forEach(doc => {
-        drivers.push(doc.data());
+        drivers.push({
+          driverId: doc.id,
+          name: doc.data().name,
+          surname: doc.data().surname,
+          father_name: doc.data().father_name
+        });
       });
       return res.json(drivers);
     })
     .catch(err => console.error(err));
 });
 
-exports.setDriver = functions.https.onRequest((req, res) => {
-  if (req.method !== "POST") {
-    return res.status(400).json({
-      error: "Method not allowed"
-    });
-  }
+app.post("/driver", (req, res) => {
   const newDriver = {
     name: req.body.name,
     surname: req.body.surname,
@@ -55,3 +50,5 @@ exports.setDriver = functions.https.onRequest((req, res) => {
       console.error(err);
     });
 });
+
+exports.api = functions.region("europe-west1").https.onRequest(app);
