@@ -1,6 +1,8 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const express = require("express");
+
+
 const app = express();
 
 admin.initializeApp();
@@ -36,7 +38,6 @@ app.post("/driver", (req, res) => {
     .firestore()
     .collection("drivers")
     .add(newDriver)
-    // eslint-disable-next-line promise/always-return
     .then(doc => {
       res.json({
         message: `document ${doc.id} created sucsess`
@@ -50,5 +51,7 @@ app.post("/driver", (req, res) => {
       console.error(err);
     });
 });
+
+
 
 exports.api = functions.region("europe-west1").https.onRequest(app);
