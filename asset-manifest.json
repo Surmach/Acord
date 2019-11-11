@@ -1,22 +1,21 @@
 {
   "files": {
     "main.css": "/Acord/static/css/main.b100e6da.chunk.css",
-    "main.js": "/Acord/static/js/main.666df153.chunk.js",
-    "main.js.map": "/Acord/static/js/main.666df153.chunk.js.map",
+    "main.js": "/Acord/static/js/main.cc3b408a.chunk.js",
+    "main.js.map": "/Acord/static/js/main.cc3b408a.chunk.js.map",
     "runtime-main.js": "/Acord/static/js/runtime-main.efdec79a.js",
     "runtime-main.js.map": "/Acord/static/js/runtime-main.efdec79a.js.map",
-    "static/js/2.14fdfa64.chunk.js": "/Acord/static/js/2.14fdfa64.chunk.js",
-    "static/js/2.14fdfa64.chunk.js.map": "/Acord/static/js/2.14fdfa64.chunk.js.map",
+    "static/js/2.4264bb12.chunk.js": "/Acord/static/js/2.4264bb12.chunk.js",
+    "static/js/2.4264bb12.chunk.js.map": "/Acord/static/js/2.4264bb12.chunk.js.map",
     "index.html": "/Acord/index.html",
-    "precache-manifest.45282088d5e436914cf05fb466d203e3.js": "/Acord/precache-manifest.45282088d5e436914cf05fb466d203e3.js",
+    "precache-manifest.ff196831720fdbbb5c162e63d80dbba0.js": "/Acord/precache-manifest.ff196831720fdbbb5c162e63d80dbba0.js",
     "service-worker.js": "/Acord/service-worker.js",
-    "static/css/main.b100e6da.chunk.css.map": "/Acord/static/css/main.b100e6da.chunk.css.map",
-    "static/media/logo.svg": "/Acord/static/media/logo.25bf045c.svg"
+    "static/css/main.b100e6da.chunk.css.map": "/Acord/static/css/main.b100e6da.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.efdec79a.js",
-    "static/js/2.14fdfa64.chunk.js",
+    "static/js/2.4264bb12.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.666df153.chunk.js"
+    "static/js/main.cc3b408a.chunk.js"
   ]
 }
