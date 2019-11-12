@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Acord/static/css/main.b100e6da.chunk.css",
-    "main.js": "/Acord/static/js/main.8ef081a3.chunk.js",
-    "main.js.map": "/Acord/static/js/main.8ef081a3.chunk.js.map",
+    "main.js": "/Acord/static/js/main.e87cd78a.chunk.js",
+    "main.js.map": "/Acord/static/js/main.e87cd78a.chunk.js.map",
     "runtime-main.js": "/Acord/static/js/runtime-main.efdec79a.js",
     "runtime-main.js.map": "/Acord/static/js/runtime-main.efdec79a.js.map",
     "static/js/2.fcbb7fa4.chunk.js": "/Acord/static/js/2.fcbb7fa4.chunk.js",
     "static/js/2.fcbb7fa4.chunk.js.map": "/Acord/static/js/2.fcbb7fa4.chunk.js.map",
     "index.html": "/Acord/index.html",
-    "precache-manifest.89c6b8cce4cfdb2dd82d503ca65110dc.js": "/Acord/precache-manifest.89c6b8cce4cfdb2dd82d503ca65110dc.js",
+    "precache-manifest.65d3cdcf2f4e97a82eae354ff3a4fc0a.js": "/Acord/precache-manifest.65d3cdcf2f4e97a82eae354ff3a4fc0a.js",
     "service-worker.js": "/Acord/service-worker.js",
     "static/css/main.b100e6da.chunk.css.map": "/Acord/static/css/main.b100e6da.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.efdec79a.js",
     "static/js/2.fcbb7fa4.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.8ef081a3.chunk.js"
+    "static/js/main.e87cd78a.chunk.js"
   ]
 }
