@@ -100,7 +100,7 @@ if (!!getCodeFromUserInput()) {
 window.verifyingCode = true;
 updateVerifyCodeButtonUI();
 var code = getCodeFromUserInput();
-confirmationResult.confirm(code).then(function (result) {
+window.confirmationResult.confirm(code).then(function (result) {
 // User signed in successfully.
 var user = result.user;
 window.verifyingCode = false;
@@ -158,7 +158,7 @@ return phoneNumber.search(pattern) !== -1;
 function resetReCaptcha() {
 if (typeof grecaptcha !== 'undefined'
 && typeof window.recaptchaWidgetId !== 'undefined') {
-grecaptcha.reset(window.recaptchaWidgetId);
+window.grecaptcha.reset(window.recaptchaWidgetId);
 }
 }
 /**
@@ -236,7 +236,7 @@ return (
             <div
                 className="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
                 <a href="/">
-                    <h3>Firebase Authentication</h3>
+                    <h3>Firebase Authentication v2</h3>
                 </a>
             </div>
         </div>
