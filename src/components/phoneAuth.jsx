@@ -1,8 +1,8 @@
 import React from 'react';
-import firebase, { initializeApp,confirmationResult,grecaptcha } from 'firebase'
-import recaptchaVerifier from 'firebase'
-import * as firebaseui from 'firebaseui'
+import firebase, { initializeApp} from 'firebase'
+
 export default function Example() {
+    
 const firebaseConfig = {
 apiKey: "AIzaSyC4rA1w4H5sRwXkxei0AjqgI_T99Jhk638",
 authDomain: "acord-659d0.firebaseapp.com",
@@ -48,8 +48,8 @@ document.getElementById('verification-code-form').addEventListener('submit', onV
 document.getElementById('cancel-verify-code-button').addEventListener('click', cancelVerification);
 // [START appVerifier]
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
-'size': 'invisible',
-'callback': function(response) {
+size: 'invisible',
+callback: function(response) {
 // reCAPTCHA solved, allow signInWithPhoneNumber.
 onSignInSubmit();
 }
@@ -156,7 +156,7 @@ return phoneNumber.search(pattern) !== -1;
 * Re-initializes the ReCaptacha widget.
 */
 function resetReCaptcha() {
-if (typeof grecaptcha !== 'undefined'
+if (typeof window.grecaptcha !== 'undefined'
 && typeof window.recaptchaWidgetId !== 'undefined') {
 window.grecaptcha.reset(window.recaptchaWidgetId);
 }
@@ -229,78 +229,44 @@ document.getElementById('account-details').textContent = 'null';
 return (
 
 <div className="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-
-    <header className="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
-        <div className="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
-            <div
-                className="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
-                <a href="/">
-                    <h3>Firebase Authentication v2</h3>
-                </a>
-            </div>
-        </div>
-    </header>
-
     <main className="mdl-layout__content mdl-color--grey-100">
         <div className="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
-
-
             <div id="sign-in-card"
                 className="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-                <div className="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
-                    <h2 className="mdl-card__title-text">Phone number authentication with invisible ReCaptcha</h2>
-                </div>
                 <div className="mdl-card__supporting-text mdl-color-text--grey-600">
                     <p>Sign in with your phone number below.</p>
-
                     <form id="sign-in-form" action="#">
-
                         <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input className="mdl-textfield__input" type="text" pattern="\+[0-9\s\-\(\)]+"
-                                id="phone-number"/>
+                                id="phone-number" />
                             <label className="mdl-textfield__label" htmlFor="phone-number">Enter your phone
                                 number...</label>
                             <span className="mdl-textfield__error">Input is not an international phone number!</span>
                         </div>
-
-
                         <button className="mdl-button mdl-js-button mdl-button--raised"
                             id="sign-in-button">Sign-in</button>
                     </form>
-
-
                     <button className="mdl-button mdl-js-button mdl-button--raised"
                         id="sign-out-button">Sign-out</button>
-
                     <form id="verification-code-form" action="#">
-
                         <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                             <input className="mdl-textfield__input" type="text" id="verification-code"/>
-                             <label className="mdl-textfield__label" htmlFor="verification-code">Enter the verification
+                            <input className="mdl-textfield__input" type="text" id="verification-code" />
+                            <label className="mdl-textfield__label" htmlFor="verification-code">Enter the verification
                                 code...</label>
                         </div>
-
-
                         <input type="submit" className="mdl-button mdl-js-button mdl-button--raised"
                             id="verify-code-button" value="Verify Code" />
-
                         <button className="mdl-button mdl-js-button mdl-button--raised"
                             id="cancel-verify-code-button">Cancel</button>
                     </form>
                 </div>
             </div>
-            
-            
-
-
             <div id="user-details-card"
                 className="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
                 <div className="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
                     <h2 className="mdl-card__title-text">User sign-in status</h2>
                 </div>
                 <div className="mdl-card__supporting-text mdl-color-text--grey-600">
-
                     <div className="user-details-container">
                         Firebase sign-in status: <span id="sign-in-status">Unknown</span>
                         <div>Firebase auth <code>currentUser</code> object value:</div>
@@ -309,14 +275,7 @@ return (
                 </div>
             </div>
         </div>
-
-
-</main>
+    </main>
 </div>
-
-
-
-
-
 );
 }
