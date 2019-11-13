@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Example from './components/phoneAuth';
+import MainMap from './components/mapBox/mainMap';
+
 
 function App() {
   return (
     <div>
-
-
-    <Example></Example>
-
+      <MainMap></MainMap>
     </div>
     
   );
