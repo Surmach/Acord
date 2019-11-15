@@ -5,9 +5,11 @@
   "private": true,
   "dependencies": {
     "mapbox-gl": "^1.5.0",
+    "mapbox-gl-geocoder": "^2.0.1",
     "material-components-web": "^4.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-map-gl": "^5.1.2",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.1"
   },
